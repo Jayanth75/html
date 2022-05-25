@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Mobile verification</title>
+        <meta charset="utf-8" />
+        <script type="text/javascript">
+            function Validate(){
+                var mob_num=/^\d{10}$/;
+                var name = document.getElementById("Name").value;
+                var address = document.getElementById("Address").value;
+                var mobile = document.getElementById("Mobile").value;
+                if(!mobile.match(mob_num)){
+                    alert("Mobile verification failed");
+                }
+                if(name=="" || name==null){
+                    alert("Please enter name");
+                }
+                if(address=="" || address==null){
+                    alert("Please enter address");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="Validate()">
+            <table>
+                <tr>
+                    <th>
+                    Name: 
+                    </th>
+                    <td><input type="text" id="Name" value=""/></td>
+                </tr>
+                <tr>
+                    <th>
+                    Address: 
+                    </th>
+                    <td><input type="text" id="Address" value=""/></td>
+                </tr>
+                <tr>
+                    <th>
+                            mobile Number: 
+                    </th>
+                    <td><input type="text" id="Mobile" value=""/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit" /></td>
+                    <td><input type="reset" value="Clear" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

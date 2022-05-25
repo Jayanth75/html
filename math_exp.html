@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Evaluation of Mathematical Expression</title>
+        <meta charset="UTF-8" />
+        <script type="text/javascript">
+            function Validate()
+            {
+                var x = document.form1.math_exp.value;
+                var result = eval(x);
+                document.form1.resulttext.value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form1">
+        <table>
+            <tr>
+                <td>Expression: </td>
+                <td><input type="text" id="math_exp" /></td>
+            </tr>
+            <tr>
+                <td>Result: </td>
+                <td><input type="text" id="resulttext" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Evaluate" onclick="Validate()" /></td>
+            </tr>
+        </table>
+    </body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <meta charset="UTF-8" />
+    <script>
+        function display()
+        {
+            let fname,dob;
+            fname=document.getElementById('name').value;
+            dob=document.getElementById('dob').value;
+            document.writeln(fname);
+            document.writeln(dob);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="display()">
+        <table>
+            <tr>
+                <th>
+                First name: 
+                </th>
+                <td><input type="text" id="name"/></td>
+            </tr>
+            <tr>
+                <th>
+                Date of birth: 
+                </th>
+                <td><input type="date" id="dob"/></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+                <td><input type="reset" value="Clear" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
